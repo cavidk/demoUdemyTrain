@@ -25,5 +25,7 @@ class DatabaseSeeder extends Seeder
 //         Address::factory(10)->create();
 
          Post::factory(10)->create();
+
+         //Here is a way to create a single record
     }
 }
