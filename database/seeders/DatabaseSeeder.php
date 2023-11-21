@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Address;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,10 +22,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 //        $this->call(PostSeeder::class);
 
-//         Address::factory(10)->create();
+         Address::factory(5)->create();
 
-         Post::factory(10)->create();
+//         Post::factory(10)->create();
 
-         //Here is a way to create a single record
+//         User::factory(10)->create();
     }
 }

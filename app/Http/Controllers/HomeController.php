@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Termwind\Components\Dd;
 
 
 class HomeController extends Controller
@@ -16,9 +15,10 @@ class HomeController extends Controller
 
     public function __invoke(Request $request)
     {
+        $users = User::all();
+        return view('home', compact('users'));
 
         //Eloquent ORM
-
         //update data with Eloquent
 
 //      $post = Post::find(4);
@@ -33,7 +33,6 @@ class HomeController extends Controller
 //
 //        \dd('success');
 
-//test mass assignment
      /*$post = Post::create([
             'title' => 'post 5 tested by mass assignment',
             'description' => 'post 5 is here and tested by mass assignment',
@@ -63,7 +62,7 @@ class HomeController extends Controller
 //       Post::where('id',12)->delete();
 //       \dd('success');
 
-       return Post::onlyTrashed()->restore();
+//       return Post::onlyTrashed()->restore();
 
 
 

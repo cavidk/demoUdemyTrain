@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Address;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,7 @@ class AddressFactory extends Factory
     {
         return [
             'street_address' => fake()->streetAddress(),
-            'user_id' => fake()->numberBetween(1,10),
+            'user_id' => fake()->numberBetween(1, 5)
         ];
     }
 }
