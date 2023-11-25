@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -15,8 +16,11 @@ class HomeController extends Controller
 
     public function __invoke(Request $request)
     {
-        $users = User::all();
-        return view('home', compact('users'));
+        /*$users = User::all();
+        return view('home', compact('users'));*/
+
+        $address = Address::all();
+        return view('home', compact('address'));
 
         //Eloquent ORM
         //update data with Eloquent
