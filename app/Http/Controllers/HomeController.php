@@ -22,6 +22,8 @@ class HomeController extends Controller
         $address = Address::all();
         return view('home', compact('address'));
 
+
+
         //Eloquent ORM
         //update data with Eloquent
 

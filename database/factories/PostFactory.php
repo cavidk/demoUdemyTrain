@@ -22,6 +22,7 @@ class PostFactory extends Factory
             'views'=> fake()->numberBetween(1,100),
             'status' => fake()->Boolean(),
             'publish_date' => fake()->date(),
+            'category_id' => fake()->numberBetween(1,10),
             'user_id' => fake()->numberBetween(1,10),
         ];
     }

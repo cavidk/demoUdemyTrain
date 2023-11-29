@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('views');
             $table->boolean('status');
             $table->timestamps(); //created_at and updated
+            $table->integer('category_id');
             $table->date('publish_date');
             $table->integer('user_id');
         });

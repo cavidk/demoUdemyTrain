@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
  */
-class AddressFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,8 @@ class AddressFactory extends Factory
     public function definition(): array
     {
         return [
-            'street_address' => fake()->streetAddress(),
-            'u_id' => fake()->numberBetween(1, 5)
+            //create a fake name as category name
+            'name' => fake()->name()
         ];
     }
 }
