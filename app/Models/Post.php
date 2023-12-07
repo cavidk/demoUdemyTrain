@@ -18,12 +18,18 @@ protected $fillable = [
     'views',
     'status',
     'publish_date',
+    'category_id',
     'user_id',
 ];
 
-//protected $guarded = [
-//    'id',
-//];
 
+  public function category(){
+        return $this->belongsTo(Category::class);
+  }
+
+
+  public function tags(){
+        return $this->belongsToMany(Tag::class);
+  }
 
 }

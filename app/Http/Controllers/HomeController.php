@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Address;
+use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -16,11 +18,26 @@ class HomeController extends Controller
 
     public function __invoke(Request $request)
     {
+
+        $posts = Post::with('tags')->get();
+
+        $tag = Tag::first();
+
+//        $post->tags()->attach([2,3,4]);
+
+        return view('home', compact('posts'));
+
+
+
+        /*$categories = Category::find(4)->posts;
+
+        return (view('home', compact('categories')));*/
+
         /*$users = User::all();
         return view('home', compact('users'));*/
 
-        $address = Address::all();
-        return view('home', compact('address'));
+        /*$address = Address::all();
+        return view('home', compact('address'));*/
 
 
 
