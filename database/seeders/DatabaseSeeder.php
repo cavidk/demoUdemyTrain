@@ -30,8 +30,6 @@ class DatabaseSeeder extends Seeder
 
         User::factory(50)->create();
 
-        Tag::factory(50)->create();
-
         Category::factory(50)->create();
     }
 }
