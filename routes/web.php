@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\__HomeController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +23,7 @@ Route::get('/', function () {
 //invokable Route
 Route::get('/home', HomeController::class);
 
-//Route::get('/home', [HomeController::class,'index']);
+Route::post('upload-file', [ImageController::class, 'handleImage'])->name('upload-file');
 Route::get('contact', [ContactController::class, 'connect']);
 Route::get('about', [AboutController::class, 'info'])->name('about');
 
