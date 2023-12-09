@@ -23,7 +23,7 @@ Route::get('/', function () {
 //invokable Route
 Route::get('/home', HomeController::class);
 
-Route::post('upload-file', [ImageController::class, 'handleImage'])->name('upload-file');
+Route::post('/upload-file', [ImageController::class, 'handleImage'])->name('upload-file');
 Route::get('contact', [ContactController::class, 'connect']);
 Route::get('about', [AboutController::class, 'info'])->name('about');
 
