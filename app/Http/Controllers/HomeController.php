@@ -19,13 +19,15 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
 
-        $posts = Post::with('tags')->get();
+        return view('home');
 
-        $tag = Tag::first();
-
-//        $post->tags()->attach([2,3,4]);
-
-        return view('home', compact('posts'));
+//        $posts = Post::with('tags')->get();
+//
+//        $tag = Tag::first();
+//
+////        $post->tags()->attach([2,3,4]);
+//
+//        return view('home', compact('posts'));
 
 
 

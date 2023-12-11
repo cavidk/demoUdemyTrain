@@ -27,13 +27,9 @@ Route::post('/upload-file', [ImageController::class, 'handleImage'])->name('uplo
 Route::get('contact', [ContactController::class, 'connect']);
 Route::get('about', [AboutController::class, 'info'])->name('about');
 
-//    $about = 'This is an about page here!';
-//    $about2 = 'This is a second response!';
-//   1-st method <=> return view('about',['about' => $about]);
-//    return view ('about',compact('about','about2'));
 
 //Resources
-Route::resource('blog', BlogController::class);
+//Route::resource('blog', BlogController::class);
 
 
 //Form handling
@@ -42,5 +38,5 @@ Route::get('/login', [LoginController::class,'logIn'])->name('login');
 
 //CSRF TOKEN
 
-Route::post('/login' ,[LoginController::class, 'handleLogin']);
+//Route::post('/login' ,[LoginController::class, 'handleLogin']);
 Route::post('save',[LoginController::class,'store'])->name('login.submit');
