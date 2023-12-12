@@ -2,6 +2,7 @@
 
 @section('content')
     <main role="main" class="container">
+        <img src="{{asset('storage/images/new_image.jpg')}}"  style="width: 500px; height: 500px" alt="">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
