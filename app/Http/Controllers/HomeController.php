@@ -19,16 +19,18 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
 
-        return view('home');
 
-//        $posts = Post::with('tags')->get();
-//
-//        $tag = Tag::first();
-//
-////        $post->tags()->attach([2,3,4]);
-//
-//        return view('home', compact('posts'));
+    return view('home');
 
+
+
+        /*        $posts = Post::with('tags')->get();
+
+                $tag = Tag::first();
+
+        //        $post->tags()->attach([2,3,4]);
+
+                return view('home', compact('posts'));*/
 
 
         /*$categories = Category::find(4)->posts;
@@ -40,7 +42,6 @@ class HomeController extends Controller
 
         /*$address = Address::all();
         return view('home', compact('address'));*/
-
 
 
         //Eloquent ORM
@@ -58,38 +59,36 @@ class HomeController extends Controller
 //
 //        \dd('success');
 
-     /*$post = Post::create([
-            'title' => 'post 5 tested by mass assignment',
-            'description' => 'post 5 is here and tested by mass assignment',
-            'views' => 7,
+        /*$post = Post::create([
+               'title' => 'post 5 tested by mass assignment',
+               'description' => 'post 5 is here and tested by mass assignment',
+               'views' => 7,
+               'status' => 1,
+               'publish_date' => date('Y-m-d'),
+               'user_id' => 2
+           ]);*/
+
+        /*$post = Post::find(5)->update([
+            'title' => 'Updated post 5 tested by mass assignment',
+            'description' => 'Updated post 5 is here and tested by mass assignment',
+            'views' => 3,
             'status' => 1,
             'publish_date' => date('Y-m-d'),
             'user_id' => 2
         ]);*/
 
-     /*$post = Post::find(5)->update([
-         'title' => 'Updated post 5 tested by mass assignment',
-         'description' => 'Updated post 5 is here and tested by mass assignment',
-         'views' => 3,
-         'status' => 1,
-         'publish_date' => date('Y-m-d'),
-         'user_id' => 2
-     ]);*/
+        /* $post2 = Post::where('status',1)->update([
 
-          /* $post2 = Post::where('status',1)->update([
-
-            'status' => 4,
-        ]);
+          'status' => 4,
+      ]);
 
 
-            \dd('success');*/
+          \dd('success');*/
 
 //       Post::where('id',12)->delete();
 //       \dd('success');
 
 //       return Post::onlyTrashed()->restore();
-
-
 
 
         /* insert and save data with eloquent

@@ -24,6 +24,12 @@ Route::get('/', function () {
 Route::get('/home', HomeController::class);
 
 Route::post('/upload-file', [ImageController::class, 'handleImage'])->name('upload-file');
+Route::get('/success', function () {
+    return "File uploaded successfully";
+})->name('success');
+
+Route::get('/download',[ImageController::class, 'download'])->name('download');
+
 Route::get('contact', [ContactController::class, 'connect']);
 Route::get('about', [AboutController::class, 'info'])->name('about');
 
@@ -34,9 +40,9 @@ Route::get('about', [AboutController::class, 'info'])->name('about');
 
 //Form handling
 
-Route::get('/login', [LoginController::class,'logIn'])->name('login');
+Route::get('/login', [LoginController::class, 'logIn'])->name('login');
 
 //CSRF TOKEN
 
 //Route::post('/login' ,[LoginController::class, 'handleLogin']);
-Route::post('save',[LoginController::class,'store'])->name('login.submit');
+Route::post('save', [LoginController::class, 'store'])->name('login.submit');
